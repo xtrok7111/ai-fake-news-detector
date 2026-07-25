@@ -1,0 +1,35 @@
+# ---- Python ----
+backend/venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- Node / React ----
+frontend/node_modules/
+node_modules/
+frontend/build/
+build/
+.cache/
+npm-debug.log*
+
+# ---- Generated at runtime ----
+backend/fakenews.db
+backend/venv/.installed
+
+# ---- Large datasets (public Kaggle "Fake and Real News" dataset) ----
+# Not committed because of size. See README for the download link.
+backend/Fake.csv
+backend/True.csv
+
+# ---- Editor / tooling / OS junk ----
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+*~
+~$*
+
+# ---- Misc ----
+ai-fake-news-detectorr.rar

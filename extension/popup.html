@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Fake News Detector</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Fake News Detector</h1>
+      <p class="subtitle">AI-powered verification</p>
+    </header>
+
+    <!-- Login screen -->
+    <section id="login-section" class="hidden">
+      <p class="info">Sign in to start analyzing.</p>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button id="login-btn" class="primary-btn">Sign In</button>
+      <p class="muted-link">
+        No account? <a href="http://localhost:3000/register" target="_blank">Register here</a>
+      </p>
+      <div id="login-error" class="error hidden"></div>
+    </section>
+
+    <!-- Main analyze screen -->
+    <section id="main-section" class="hidden">
+      <div class="user-bar">
+        <span id="user-name"></span>
+        <button id="logout-btn" class="logout-link">Logout</button>
+      </div>
+
+      <p class="info">Paste a news article to verify it.</p>
+      <textarea id="text-input" rows="5" placeholder="Paste a headline or article..."></textarea>
+      <button id="analyze-btn" class="primary-btn">Verify Authenticity</button>
+
+      <div id="loader" class="hidden">
+        <div class="spinner"></div>
+        <p>Analyzing using AI...</p>
+      </div>
+
+      <div id="result" class="hidden">
+        <div class="result-header">
+          <span class="verdict-label">Verdict</span>
+          <span id="verdict" class="verdict"></span>
+        </div>
+        <div class="confidence-row">
+          <span>Confidence</span>
+          <span id="confidence-num"></span>
+        </div>
+        <div class="progress-bg">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div id="risk-badge" class="risk-badge"></div>
+        <a href="http://localhost:3000/dashboard" target="_blank" class="open-app-link">
+          View full dashboard →
+        </a>
+      </div>
+
+      <div id="error-msg" class="error hidden"></div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
